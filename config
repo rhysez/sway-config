@@ -21,7 +21,7 @@ set $menu wmenu-run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/rice/Pictures/wallpapers/attack-on-titan/aot-big-boy.jpg fill
+output * bg /home/rice/Pictures/wallpapers/winter/winter-fantasy-town.png fill
 #
 # Example configuration:
 #
@@ -215,18 +215,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-    colors {
-        statusline #d5c4a1
-        background #282828
-        inactive_workspace #d5c4a1 #504945 #d5c4a1
-        focused_workspace #d5c4a1 #d5c4a1 #282828
-    }
+  swaybar_command waybar
 }
 
 ### Window styles and decorations and behavior.
@@ -262,12 +251,12 @@ set {
 
 for_window [class=".*"] {
     inhibit_idle fullscreen
-    opacity set 0.95
+    opacity set 1
 }
 
 for_window [app_id=".*"] {
     inhibit_idle fullscreen
-    opacity set 0.95
+    opacity set 1
 }
 
 # Popup windows
